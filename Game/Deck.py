@@ -28,13 +28,16 @@ class Deck ():
             card=deck[n]
             deck.pop(n)
             newDeck.append(card)
-            
-        print("new Deck length", len(newDeck))
-        print("old Deck length", len(deck))
-        for card in newDeck:
-            card.printCard()
-            print("---")
             self.deck=newDeck
+            
+    def print_deck(self):
+        print=self.deck
+        print("After burning")   
+        top_card=self.deck[0]
+        self.deck.pop(0)
+        self.deck.append(top_card)
+        self.print_deck()   
+        pass     
    
     def burn_card(self):
         # take top card puts it below the deck
