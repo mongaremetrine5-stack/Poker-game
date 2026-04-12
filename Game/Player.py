@@ -15,7 +15,7 @@ class Player():
         while True:
             amount=input(f"Place initial bet amount. Current amount is {self.amount}:")
             if amount.isdigit():
-                n=int(amount):
+                n=int(amount)
                 if n>0 and n<= self.amount:
                     self.amount=self.amount-n #use a setter
                     return n
