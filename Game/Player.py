@@ -60,7 +60,7 @@ def auto_match_or_raise(self,amount):
 
     if to_do ==1:
         if self.amount>amount:
-            self.amount-amount
+            self.amount=self.amount-amount
             print(f"Matching your action. Bet = {amount}")
             return amount
         else:
@@ -75,5 +75,3 @@ def update_amount_bet(self,amount):
     self.total_amount_bet=self.total_amount_bet+amount
 
 
-def reset_amount_bet(self):
-    self.total_amount_bet=0
