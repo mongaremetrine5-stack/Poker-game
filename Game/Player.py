@@ -19,7 +19,8 @@ def place_initial_bet(self):
             if n>0 and n <= self.amount:
                 self.amount = self.amount-n
                 return n
-
+            
+            print("Invalid amount entered")
             print(f"Amount must range between 1 and {self.amount}")
             print("Try again")
         else:
@@ -73,5 +74,8 @@ def auto_match_or_raise(self,amount):
 
 def update_amount_bet(self,amount):
     self.total_amount_bet=self.total_amount_bet+amount
+    
+def reset_amount_bet(self):
+    self.total_amount_bet=0    
 
 
