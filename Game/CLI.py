@@ -13,13 +13,29 @@ def play_game():
     
     pc_amount=pc.auto_match_or_raise(human_amount)
     pc.update_amount_bet(human_amount)
-    
+ 
     if pc_amount=="l":
         print("Towel throwing Human won")
         return
     
     game.turn=human
     game.pot=pc_amount+human_amount
+    
+    k=0
+    
+    print("--------------------------------")
+    print("Starting the first betting round")
+    print("--------------------------------")
+    while True:
+        
+        #human and PC -> call,raise,fold
+        if k>1 and pc.amount == huan.amount:
+            return " Betting round one completed"
+        
+        k=k+1
+        
+        amount=human.call_fold_or_raise(player=pc)
+        #2 betting rounds. If the player raises in the first round, then there is a second betting round. If the player calls in the first round, then there is no second betting round.
     
     
     play_game()

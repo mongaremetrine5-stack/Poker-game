@@ -26,6 +26,30 @@ class Player():
             else:
                 print("Please enter a valid number between 1 and {self.amount}.")
                 
+    def call_fold_or_raise(self,player):         
+        choice=input ("Press 1 to call \n Press 2 to fold \n Press 3 to raise ")   
+        if choice=="1":
+            return self.call(player)
+        
+        if choice=="2":
+            return self.fold(player)
+        
+        if choice=="3":
+            return self.raise_bet(player)
+        
+        print(f"Invalid choice {choice}. Choose 1, 2, 3")
+        self.call_fold_or_raise(player)
+        
+        def call(self, player):
+            print("Call action")
+            
+    def fold(self, player):
+        print( "I Fold")
+        return "You lost"
+    
+    def raise_bet(self, player):
+        print("Raise action")
+                
     def auto_match_or_auto_raise(self,amount):
         print("PC thinking.What to do")
         time.sleep(2)
@@ -43,13 +67,13 @@ class Player():
             else:
                 return"l"
             
-            self.amount=self.amount-raise_amount
-            print("I have a good feeling. I raise by ",raise_amount)
-            return raise_amount
+        self.amount=self.amount-raise_amount
+        print("I have a good feeling. I raise by ",raise_amount)
+        return raise_amount
         
     def update_amount_bet(self,amount):
         self.total_amount_bet=self.total_amount_bet+amount
         
     def reset_amount_bet(self):
         self.total_amount_bet=0        
-            
+             
