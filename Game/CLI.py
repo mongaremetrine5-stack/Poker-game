@@ -29,7 +29,7 @@ def play_game():
     while True:
         
         #human and PC -> call,raise,fold
-        if k>1 and pc.amount == huan.amount:
+        if k>1 and pc.amount == human.amount:
             return " Betting round one completed"
         
         k=k+1
@@ -38,4 +38,4 @@ def play_game():
         #2 betting rounds. If the player raises in the first round, then there is a second betting round. If the player calls in the first round, then there is no second betting round.
     
     
-    play_game()
+play_game()
