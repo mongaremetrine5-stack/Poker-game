@@ -70,7 +70,7 @@ class Game():
                 return None
 
 
-        return
+        return  
         for i,rank in enumerate(royal):
             found=False
             for j,card in enumerate(cards):
